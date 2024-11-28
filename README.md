@@ -15,3 +15,8 @@ php artisan migrate:fresh --seed
 ```
 php artisan serve
 ```
+
+## About
+Creating CRUD application for one of the biggest Consulting Firm in Indonesia. The application will have functionality to add or list Consultants, and each Consultant will be assigned to Client's project depends on Consultant's industry and expertise. 
+
+ERD : https://app.eraser.io/workspace/j4c332cftDAFeBPLr2PW?origin=share
