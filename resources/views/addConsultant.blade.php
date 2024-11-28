@@ -18,10 +18,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a href="{{route('welcome')}}" class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Insert</a>
+                        <a href="{{route('addConsultant')}}" class="nav-link" href="#">Insert</a>
                     </li>
                 </ul>
             </div>
@@ -64,8 +64,10 @@
 
             <div class="mb-3">
                 <label for="" class="form-label">Project</label>
-                <select class="form-select" aria-label="Default select example" name="">
-                    <option value=""></option>
+                <select class="form-select" aria-label="Default select example" name="client_needs">
+                    @foreach ($clients as $client)
+                        <option value="{{$client->id}}">{{$client->needs}}</option>
+                    @endforeach
                 </select>
             </div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Client;
 use App\Models\Consultant;
 use Illuminate\Http\Request;
 
@@ -21,12 +22,14 @@ class ConsultantController extends Controller
             'expertise' => $request->expertise,
             'hourlyRate' => $request->hourlyRate,
             'availability' => $request->availability,
+            'client_id' => $request->client_needs,
         ]);
 
         return redirect(route('welcome'));
     }
 
     public function addConsultant(){
-        return view('addConsultant');
+        $clients = Client::all();
+        return view('addConsultant', compact('clients'));
     }
 }

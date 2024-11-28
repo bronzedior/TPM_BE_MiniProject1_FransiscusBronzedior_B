@@ -18,10 +18,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a href="{{route('welcome')}}" class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Insert</a>
+                        <a href="{{route('addConsultant')}}" class="nav-link" href="#">Insert</a>
                     </li>
                 </ul>
             </div>
@@ -31,21 +31,24 @@
     <h1 class="text-center">Our Consultants</h1>
 
     <div class="m-5">
-        <button class="btn btn-success">Insert</button>
+        <a href="{{route('addConsultant')}}" class="">
+            <button class="btn btn-success">Insert</button>
+        </a>
     </div>
 
     <div class="d-flex flex-row justify-content-center gap-5">
         @foreach ($consultants as $consultant)
         <div class="card" style="width: 18rem;">
-            <img src="" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Name: {{$consultant->name}}</h5>
                 <p class="card-text">Position: {{$consultant->position}}</p>
                 <p class="card-text">Industry: {{$consultant->industry}}</p>
                 <p class="card-text">Expertise: {{$consultant->expertise}}</p>
-                <p class="card-text">Hourly Rate: {{$consultant->hourlyRate}}</p>
+                <p class="card-text">Hourly Rate (Ribu rupiah): {{$consultant->hourlyRate}}</p>
                 <p class="card-text">Availability: {{$consultant->availability}}</p>
-                <p class="card-text">Project:</p>
+                <p class="card-text">Project: {{$consultant->client->needs}}</p>
+                <p class="card-text">Duration (Weeks): {{$consultant->client->duration}}</p>
+                <p class="card-text">Compensation (Ribu rupiah): {{$consultant->client->compensation}}</p>
                 <a href="" class="btn btn-success">Edit</a>
                 <button type="" class="btn btn-danger">Delete</button>
             </div>

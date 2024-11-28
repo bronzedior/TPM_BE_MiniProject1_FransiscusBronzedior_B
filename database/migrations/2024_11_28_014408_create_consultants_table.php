@@ -17,8 +17,11 @@ return new class extends Migration
             $table->string('position');
             $table->string('industry');
             $table->string('expertise');
-            $table->integer('hourlyRate');
+            $table->integer('hourlyRate'); // dinyatakan dalam ribuan rupiah
             $table->date('availability');
+
+            $table->unsignedBigInteger('client_id');
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
