@@ -11,6 +11,8 @@ ERD : https://app.eraser.io/workspace/j4c332cftDAFeBPLr2PW?origin=share
 gh repo clone bronzedior/TPM_BE_MiniProject1_FransiscusBronzedior_B
 ```
 
+2. Start XAMPP (Apache and MYSql)
+
 2. Fresh Migrate
 ```
 php artisan migrate:fresh --seed
