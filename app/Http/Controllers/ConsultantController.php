@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class ConsultantController extends Controller
 {
     public function welcome(){
-        return view('welcome');
+        $consultants = Consultant::all();
+        return view('welcome', compact('consultants'));
     }
 
     public function store(Request $request){

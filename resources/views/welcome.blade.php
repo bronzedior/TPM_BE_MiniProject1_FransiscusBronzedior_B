@@ -35,20 +35,22 @@
     </div>
 
     <div class="d-flex flex-row justify-content-center gap-5">
+        @foreach ($consultants as $consultant)
         <div class="card" style="width: 18rem;">
             <img src="" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Name:</h5>
-                <p class="card-text">Position:</p>
-                <p class="card-text">Industry:</p>
-                <p class="card-text">Expertise:</p>
-                <p class="card-text">Hourly Rate:</p>
-                <p class="card-text">Availability:</p>
+                <h5 class="card-title">Name: {{$consultant->name}}</h5>
+                <p class="card-text">Position: {{$consultant->position}}</p>
+                <p class="card-text">Industry: {{$consultant->industry}}</p>
+                <p class="card-text">Expertise: {{$consultant->expertise}}</p>
+                <p class="card-text">Hourly Rate: {{$consultant->hourlyRate}}</p>
+                <p class="card-text">Availability: {{$consultant->availability}}</p>
                 <p class="card-text">Project:</p>
                 <a href="" class="btn btn-success">Edit</a>
                 <button type="" class="btn btn-danger">Delete</button>
             </div>
         </div>
+        @endforeach
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
