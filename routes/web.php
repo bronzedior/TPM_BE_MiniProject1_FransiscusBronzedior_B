@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\ConsultantController;
-use App\Models\Consultant;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ConsultantController::class, 'welcome'])->name('welcome');
+
+Route::get('/seed-clients', [ConsultantController::class, 'seedClients'])->name('seedClients');
 
 Route::post('/store', [ConsultantController::class,'store'])->name('store');
 

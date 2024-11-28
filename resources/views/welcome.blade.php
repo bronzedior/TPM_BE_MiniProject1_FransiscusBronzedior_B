@@ -36,24 +36,28 @@
         </a>
     </div>
 
-    <div class="d-flex flex-row justify-content-center gap-5">
-        @foreach ($consultants as $consultant)
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Name: {{$consultant->name}}</h5>
-                <p class="card-text">Position: {{$consultant->position}}</p>
-                <p class="card-text">Industry: {{$consultant->industry}}</p>
-                <p class="card-text">Expertise: {{$consultant->expertise}}</p>
-                <p class="card-text">Hourly Rate (Ribu rupiah): {{$consultant->hourlyRate}}</p>
-                <p class="card-text">Availability: {{$consultant->availability}}</p>
-                <p class="card-text">Project: {{$consultant->client->needs}}</p>
-                <p class="card-text">Duration (Weeks): {{$consultant->client->duration}}</p>
-                <p class="card-text">Compensation (Ribu rupiah): {{$consultant->client->compensation}}</p>
-                <a href="" class="btn btn-success">Edit</a>
-                <button type="" class="btn btn-danger">Delete</button>
+    <div class="container">
+        <div class="row">
+            @foreach ($consultants as $consultant)
+            <div class="col-md-3 mb-4 d-flex align-items-stretch">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: {{$consultant->name}}</h5>
+                        <p class="card-text">Position: {{$consultant->position}}</p>
+                        <p class="card-text">Industry: {{$consultant->industry}}</p>
+                        <p class="card-text">Expertise: {{$consultant->expertise}}</p>
+                        <p class="card-text">Hourly Rate (Ribu rupiah): {{$consultant->hourlyRate}}</p>
+                        <p class="card-text">Availability: {{$consultant->availability}}</p>
+                        <p class="card-text">Project: {{$consultant->client->needs}}</p>
+                        <p class="card-text">Duration (Weeks): {{$consultant->client->duration}}</p>
+                        <p class="card-text">Compensation (Ribu rupiah): {{$consultant->client->compensation}}</p>
+                        <a href="" class="btn btn-success">Edit</a>
+                        <button type="" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
