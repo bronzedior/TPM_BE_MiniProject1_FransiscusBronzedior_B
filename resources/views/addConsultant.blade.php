@@ -30,41 +30,37 @@
 
     <div class="p-5">
         <h1 class="text-center">Add Consultant</h1>
-        <form action="" method="" enctype="">
+        <form action="{{route('store')}}" method="POST" enctype="">
+            @csrf
             <div class="mb-3">
                 <label for="" class="form-label">Name</label>
-                <input value="" type="text" class="form-control" id="" name="">
+                <input value="" type="text" class="form-control" id="" name="name">
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Position</label>
-                <input value="" type="text" class="form-control" id="" name="">
+                <input value="" type="text" class="form-control" id="" name="position">
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Industry</label>
-                <input value="" type="text" class="form-control" id="" name="">
+                <input value="" type="text" class="form-control" id="" name="industry">
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Expertise</label>
-                <input value="" type="text" class="form-control" id="" name="">
+                <input value="" type="text" class="form-control" id="" name="expertise">
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Hourly Rate</label>
-                <input value="" type="number" class="form-control" id="" name="">
+                <input value="" type="number" class="form-control" id="" name="hourlyRate">
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Availability</label>
-                <input value=""type="date" class="form-control" id="" name="">
+                <input value=""type="date" class="form-control" id="" name="availability">
             </div>
-
-            {{-- <div class="mb-3">
-                <label for="" class="form-label">Image</label>
-                <input  type="file" class="form-control" id="" name="">
-            </div> --}}
 
             <div class="mb-3">
                 <label for="" class="form-label">Project</label>
